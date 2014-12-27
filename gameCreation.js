@@ -4,7 +4,7 @@ GameFactory.createGame = function(playerIds){
 	var deck = createDeck();
 	var players = createPlayers(playerIds);
 
-	GameFactory.dealPlayers(players, deck);
+	dealPlayers(players, deck);
 
 	var table = dealTable(deck);
 

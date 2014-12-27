@@ -15,3 +15,10 @@ if(Meteor.isClient){
 	Meteor.subscribe('users');
 	Meteor.subscribe('games');
 }
+
+Meteor.methods({
+	createGame: function(opponentId){
+		var game = GameFactory.createGame([Meteor.userId, opponentId]);
+		Games.insert(game);
+	}
+});
