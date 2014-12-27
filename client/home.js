@@ -1,6 +1,6 @@
 Template.userList.helpers({
 	users: function() {
-		var myId = Meteor.userId;
+		var myId = Meteor.userId();
 		var excluded = [myId];
 
 		//haetaan avoimien pelin vastustajien id:t

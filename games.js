@@ -18,7 +18,7 @@ if(Meteor.isClient){
 
 Meteor.methods({
 	createGame: function(opponentId){
-		var game = GameFactory.createGame([Meteor.userId, opponentId]);
+		var game = GameFactory.createGame([Meteor.userId(), opponentId]);
 		Games.insert(game);
 	}
 });
