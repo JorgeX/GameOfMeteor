@@ -28,7 +28,7 @@ Template.gameList.helpers({
 	}
 });
 
-function otherIf(game){
+function otherId(game){
  return game.currentTurn[game.currentTurn[0] === Meteor.userId() ? 1 : 0];
 }
 

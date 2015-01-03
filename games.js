@@ -3,7 +3,10 @@ Games = new Meteor.Collection('games');
 if(Meteor.isServer){
 	Meteor.publish('games', function(){
 		//palauta pelit joissa userId on currentTurn arrayssa mukana
-		return Games.find({currentTurn: this.userId});
+		console.log("this userid: " + this.userId);
+		var pelit = Games.find({currentTurn: this.userId});
+		console.log('pelit: ' + pelit[0]);
+		return pelit;
 	});
 
 	Meteor.publish('users', function(){

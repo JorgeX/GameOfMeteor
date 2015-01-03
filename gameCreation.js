@@ -58,7 +58,7 @@ function createDeck(){
 		for(var i=1; i<=10;i++){
 			var name = i;
 			if(i === 1) name = 'A';
-			if(i === 8) name = 'N';
+			if(i === 8) name = 'J';
 			if(i === 9) name = 'Q';
 			if(i === 10) name = 'K';
 			cards.push({
