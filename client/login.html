@@ -25,14 +25,16 @@
 </template>
 
 <template name='signupLogin'>
-	{{#if loggingIn}}
-		Logging in...
-	{{else}}
-		{{#if currentUser}}
-			{{> logout}}
+	<div>
+		{{#if loggingIn}}
+			Logging in...
 		{{else}}
-			{{> signup}}
-			{{> login}}
+			{{#if currentUser}}
+				{{> logout}}
+			{{else}}
+				{{> signup}}
+				{{> login}}
+			{{/if}}
 		{{/if}}
-	{{/if}}
+	</div>
 </template>
